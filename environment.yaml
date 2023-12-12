@@ -11,9 +11,9 @@ dependencies:
   - matplotlib
   - scikit-learn
   - pip
+
   - pip:
     - captum
-    - hydra
     - pandas==1.4.4
     - hydra-core
     - seaborn

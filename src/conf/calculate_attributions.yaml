@@ -2,8 +2,8 @@ defaults:
   - explainer: ig
   - dataset: imagenet
   - model: ResNet50
-  - imputer@explainer.imputer: constant_value
-  - segmentation@explainer.segmentation: slic
+#  - imputer@explainer.imputer: constant_value
+#  - segmentation@explainer.segmentation: slic
   - _self_
 
 n_samples: 10
