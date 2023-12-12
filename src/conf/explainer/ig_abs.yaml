@@ -1,0 +1,7 @@
+name: IntegratedGradients
+#baseline: 0
+n_steps: 50
+#n_eval: 1000
+noise_tunnel: False
+
+abs: True

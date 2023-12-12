@@ -1,0 +1,4 @@
+name: Madry_ViT
+
+patch_size: 14
+image_size: 224

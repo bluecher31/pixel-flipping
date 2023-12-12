@@ -1,0 +1,41 @@
+defaults:
+  - dataset: imagenet
+  - imputer@imputer_pf: constant_value
+  - segmentation@segmentation_pf: slic
+  - model: resnet50
+  - explainer: shapley
+  - segmentation@explainer.segmentation: slic
+  - imputer@explainer.imputer: constant_value
+  - _self_
+
+
+
+#minimal_percentage: 0.01
+#maximal_percentage: 1
+n_samples: 100
+n_measurements: 15
+scale_spacing: log   # log or linear
+most_relevant_first: True
+n_imputations_pf: 5
+
+segmentation_pf:
+  n_superpixel: 25
+
+
+which_target: label     # label, max
+
+#explainer:
+#  n_eval: 1000   # [100, 250, 750, 5000]
+#  cardinality_coalitions:
+#  segmentation:
+#    n_superpixel: 25
+
+
+platform: local_stefan
+
+
+hydra:
+  run:
+    dir: ../outputs/${dataset.name}/${model.name}/pixel_flipping/${imputer_pf.name}/${explainer.name}/${now:%Y-%m-%d}/${now:%H-%M-%S.%f}
+  job:
+    chdir: True

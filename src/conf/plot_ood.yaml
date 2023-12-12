@@ -1,0 +1,46 @@
+defaults:
+  - measure_ood_scores
+  - override segmentation: slic
+  - override model: resnet50
+  - _self_
+
+plotting_routines:
+#  - ood
+#  - ood_superpixels
+#  - ood_imputers
+#  - ood_shape_segmentanything
+#  - ood_diffusion
+#  - visualize_ood_bias
+#  - label_correlation_to_internal
+  - plot_df
+
+compute_df_fresh: False
+
+which_ood_measure: label      # [ood, entropy, label, correlation_baseline]
+average_over_imputations: False
+
+
+imputer_name: constant_value
+n_superpixels: [10, 25, 50, 75, 100, 200, 500]    # 25 is commented out
+
+
+imputer_names:
+  - constant_value
+  - trainset
+  - color_histogram
+  - cv2
+  - diffusion
+#  - internal
+
+plt_style: figma_half_size    # figma_half_size, figma_one_third
+
+n_samples: 100
+
+segmentation:
+  n_superpixel:
+    200
+
+hydra:
+  run:
+    dir: ../outputs/tmp
+

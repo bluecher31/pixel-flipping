@@ -1,0 +1,9 @@
+name: diffusion
+batch_size: 16
+diffusion_steps: 1000
+time_steps: 250
+n_resampling: 5
+class_conditioning: false
+relative_path_to_repaint_root: src/diffusion_imputer/RePaint
+relative_config_path: src/diffusion_imputer/RePaint/confs/test_inet256_thin.yml
+method_matching_internal_shape: cv2_resize          # empty_frame or cv2_resize

@@ -1,0 +1,7 @@
+defaults:
+  - ../imputer/color_histogram@imputer
+  - ../segmentation/slic@segmentation
+  - _self_
+name: PredDiff
+n_eval: 2
+

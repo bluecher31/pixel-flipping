@@ -1,0 +1,41 @@
+defaults:
+  - calculate_attributions
+  - override imputer@explainer.imputer: trainset
+  - override segmentation@explainer.segmentation: slic
+#  - override explainer: preddiff
+  - _self_
+
+plotting_routines:
+#  - attributions
+  - segmentation
+#  - convergence_analysis
+#  - cross_correlation
+#  - correlation_to_shapley
+
+n_samples: 100
+
+explainer:
+  segmentation:
+    n_superpixel: 25
+  n_eval: 1000
+
+imputers:
+  - trainset
+#  - color_histogram
+  - constant_value
+#  - cv2
+#  - diffusion
+
+#n_evals: [10, 25, 50, 75, 100, 250, 1000]
+n_evals: [10, 25, 50, 75, 100, 150, 250, 500, 1000]               # imagenet
+#n_evals: [1000]
+
+#cardinalities: [-1, -50, -100, 50, 0]
+#cardinalities: [null]
+cardinalities: [-1, -5, -10, -15, 5, 0]     # 10
+
+figma: true
+
+hydra:
+  run:
+    dir: ../outputs/tmp

@@ -1,0 +1,8 @@
+name: imagenet
+root_data: ${resolve_imagenet:${platform}}
+#root_data: ${hydra:runtime.cwd}/../../data/ImageNet-complete/val    # stefan local
+#root_data: '/home/space/datasets/imagenet/2012/val_set'            # ida cluster
+#root_data: '/media/vielhaben/Data1/ImageNet-complete/val'          # johanna
+
+image_size: 224     # squared via rescaling and center crop
+#wrapper_crop: 256   # internally everything (model, segmentation, etc.) works with this size

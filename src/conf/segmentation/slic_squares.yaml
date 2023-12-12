@@ -1,0 +1,4 @@
+name: slic
+n_superpixel: 25
+# we could store the compactness_slic parameter inside the dataset.yaml files (imagenet: 1.)
+compactness_slic: 10.

@@ -1,0 +1,4 @@
+name: mnist
+root_data: ${hydra:runtime.cwd}/../data
+
+

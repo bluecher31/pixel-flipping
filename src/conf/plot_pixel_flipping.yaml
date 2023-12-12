@@ -1,0 +1,65 @@
+defaults:
+  - run_pixel_flipping
+  - override explainer: shapley
+  - override imputer@imputer_pf: diffusion
+  - override model: resnet50
+  - override imputer@explainer.imputer: trainset
+  - _self_
+
+most_relevant_first: False
+pf_metric: SRG        # [MIF, LIF, NEW, MRG, LRG, SRG], overrides 'most_relevant_first' for some stuff.
+which_target: label     # label, max
+
+plotting_routines:
+#  - pf_imputers
+#  - pf_pixelwise_attributions
+#  - auc_pixelwise_experiments
+#  - pf_overview         # final experiment figure
+#  - s_shapley         # results for final table
+#  - s_shapley_auc
+#  - imputer_dependence_auc
+#  - occlusion_dependence_pf_metrics
+  - analyze_rankings
+
+imputers:
+#  - trainset
+#  - color_histogram
+#  - constant_value
+  - cv2
+#  - internal
+#  - diffusion
+
+imputer_overview: trainset
+zoom_overview: False
+s_shapley_relative_to_baseline: False
+
+explainers:
+#  - gradients
+#  - gradients_nt
+#  - zennit
+  - input_x_gradients
+  - input_x_gradients_abs
+  - ig
+  - ig_abs
+#  - ig_nt
+#  - random
+#  - ig_500
+
+scale_spacing: log    # log or linear
+
+segmentation_pf:
+  n_superpixel: 25
+
+explainer:
+  cardinality_coalitions:
+
+#cardinalities: [-1, -5, -10, -15, 5, 0]     # , 10
+cardinalities: [-1, -10, 0]     # , 10
+
+figma: true
+
+platform: local_stefan
+
+hydra:
+  run:
+    dir: ../outputs/tmp

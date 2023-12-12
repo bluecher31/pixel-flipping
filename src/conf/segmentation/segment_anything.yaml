@@ -1,0 +1,5 @@
+name: segment_anything
+
+n_superpixel: 50
+n_deviation: 10
+

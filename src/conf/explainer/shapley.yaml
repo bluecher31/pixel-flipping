@@ -1,0 +1,9 @@
+defaults:
+  - ../imputer/color_histogram@imputer
+  - ../segmentation/slic@segmentation
+  - _self_
+
+name: Shapley values
+cardinality_coalitions:       # empty for None, [0] or - 0 - 1
+symmetric_coalitions: false
+n_eval: 1000

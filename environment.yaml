@@ -1,0 +1,24 @@
+name: pixel-flipping
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pytest
+  - scipy
+  - numpy
+  - coverage
+  - jupyter
+  - matplotlib
+  - scikit-learn
+  - pip
+  - pip:
+    - captum
+    - hydra
+    - pandas==1.4.4
+    - hydra-core
+    - seaborn
+    - tqdm
+    - scikit-image
+    - timm
+    - torch
+    - zennit

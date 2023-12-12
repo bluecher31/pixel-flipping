@@ -1,0 +1,7 @@
+name: patch_vit
+#n_superpixel: 100
+
+patch_size: 14      # spatial dimension of transformer embedding, this translate to mask size in input space
+image_size: ${dataset.image_size}
+
+n_superpixel: 196

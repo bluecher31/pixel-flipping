@@ -1,0 +1,21 @@
+defaults:
+  - dataset: imagenet
+  - imputer: constant_value
+  - model: resnet50
+  - segmentation: slic
+  - _self_
+
+n_samples: 100
+
+segmentation:
+  n_superpixel: 80
+
+filter_images: True
+
+platform: local_stefan
+
+hydra:
+  run:
+    dir: ../outputs/${dataset.name}/${model.name}/ood/${imputer.name}/${now:%Y-%m-%d}/${now:%H-%M-%S.%f}
+  job:
+    chdir: True

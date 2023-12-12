@@ -1,0 +1,18 @@
+defaults:
+  - imputer: trainset
+  - segmentation: slic
+  - dataset: imagenet
+  - _self_
+
+n_samples: 100
+
+segmentation:
+  n_superpixel: 196
+
+platform: local_stefan
+
+hydra:
+  run:
+    dir: ../outputs/${dataset.name}/imputations/${imputer.name}/${now:%Y-%m-%d}/${now:%H-%M-%S.%f}
+  job:
+    chdir: True

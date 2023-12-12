@@ -1,0 +1,32 @@
+defaults:
+  - imputer: color_histogram
+  - segmentation: vit_patches
+  - dataset: imagenet
+  - model: madry_vit
+  - _self_
+
+compute_fresh: False
+class_token: False
+hook_name: block_-1
+
+plotting_routines:
+  - feature_similarity_to_image
+  - similarity_to_internal
+  - similarity_to_remaining_tokens
+
+imputer_names:
+  - constant_value
+  - trainset
+  - color_histogram
+  - cv2
+  - diffusion
+  - internal
+
+#segmentation:
+#  n_superpixel: 25
+
+platform: local_stefan
+
+hydra:
+  run:
+    dir: ../outputs/tmp
