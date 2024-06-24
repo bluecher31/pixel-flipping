@@ -4,10 +4,8 @@ This repository accompanies our paper on **Decoupling Pixel Flipping and Occlusi
 @misc{blücher2024decoupling,
       title={Decoupling Pixel Flipping and Occlusion Strategy for Consistent XAI Benchmarks}, 
       author={Stefan Blücher and Johanna Vielhaben and Nils Strodthoff},
-      year={2024},
-      eprint={2401.06654},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}}
+      journal={Transactions on Machine Learning Research},
+      year={2024}
 ```
 
 ## Setup
