@@ -1,11 +1,12 @@
 # pixel-flipping
 This repository accompanies our paper on **Decoupling Pixel Flipping and Occlusion Strategy for Consistent XAI Benchmarks**. If you build on our research, please cite as follows 
 ```
-@article{blücher2024decoupling,
+@article{bluecher2024decoupling,
       title={Decoupling Pixel Flipping and Occlusion Strategy for Consistent XAI Benchmarks}, 
       author={Stefan Blücher and Johanna Vielhaben and Nils Strodthoff},
       journal={Transactions on Machine Learning Research},
       year={2024}
+}
 ```
 
 ## Setup
